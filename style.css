@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: #eee;
+}
+
+body {
+    font-family: futura,helvetica;
+    font-size: 16px;
+    width: 800px;
+    margin: auto;
+    padding: 15px;
+}
+
+.player {
+    margin-top: 100px;
+}
+
+
+.editor_time {
+    flex: 3;
+    min-width: 50px;
+    background: transparent;
+    border: none;
+    color: rgba(255,255,255,.8);
+    font-family: inherit;
+    font-size: 14px;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+.editor_time:hover,
+.editor_time-focused {
+    background: rgba(0,0,0,.4);
+}
+
+.editor_btns {
+    display: flex;
+}
+
+.editor_btn {
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
+    color: rgba(255,255,255,.8);
+    background: rgba(0,0,0,.2);
+    font-size: 14px;
+    padding: 10px;
+}
+.editor_btn:hover {
+    color: white;
+    background: rgba(0,0,0,.5);
+}
+
+.editor_save {
+    flex: 1;
+}
+
+.editor {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 100%;
+    overflow-y: auto;
+    background: #555;
+}
+
+.editor_edit {
+    padding: 10px;
+    background: rgba(0,0,0,.5);
+}
+
+.editor_new {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    background: #333;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.editor_range {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 0;
+    color: white;
+    font-size: 13px;
+}
+
+.editor_editbtn {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 37px;
+    height: 37px;
+    fill: white;
+    padding: 10px;
+    background: rgba(0,0,0,.2);
+}
+
+.editor_range2 {
+    display: none;
+}
+.editor_range:hover {
+    background: rgba(0,0,0,.2);
+}
+.editor_range-active {
+    background: rgba(0,0,0,.4);
+}
+.editor_range-active:not(:hover) .editor_range2 {
+    display: block;
+}
+
+.editor_range:hover .editor_editbtn {
+    display: block;
+}
+
+
